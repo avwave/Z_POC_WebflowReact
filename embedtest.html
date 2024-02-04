@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Embed MyWidget</title>
+  </head>
+  <body>
+    <div id="widget-container"></div>
+
+    <script>
+      window.MyWidgetSettings = {
+        containerId: "#widget-container",
+        name: 'John Doe',
+      };
+    </script>
+    <script>
+      // Load the widget script
+      var script = document.createElement("script");
+      script.src = "../build/static/js/main.4ee334c1.js"; // Replace with the actual URL
+      document.head.appendChild(script);
+    </script>
+  </body>
+</html>
