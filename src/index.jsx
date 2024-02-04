@@ -5,9 +5,17 @@ import ReactDOM from 'react-dom/client';
 import MyWidget from './MyWidget';
 
 // Assuming the global variable is named `MyWidgetSettings`
-const settings = window.MyWidgetSettings;
+let settings = window.MyWidgetSettings;
+if (!settings?.containerId) {
+  settings={
+    containerId: '#root',
+    name: 'My Widget'
+  }
+}
 
-if (settings && settings.containerId) {
+
+
+if (settings?.containerId) {
   const widgetHostElement = document.querySelector(settings.containerId);
   if (widgetHostElement) {
     const root = ReactDOM.createRoot(widgetHostElement);
