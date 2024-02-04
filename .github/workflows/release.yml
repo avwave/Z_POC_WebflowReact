@@ -30,3 +30,6 @@ jobs:
           publish_dir: ./build
           publish_branch: release  # The branch you want to push the build artifacts to
           keep_files: true  # Set to true to keep existing files in the branch
+permissions:
+  contents: write
+  issues: write
